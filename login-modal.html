@@ -1,0 +1,27 @@
+<div class="modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title">Sign In</h3>
+      </div>
+      <div class="modal-body">
+        <br-demo-warning></br-demo-warning>
+        <p ng-if="!model.newLogin" class="alert alert-warning">
+          Your session has expired, please sign back in to continue.
+        </p>
+        <p ng-if="model.display.customWarning" class="alert alert-warning">
+          {{model.display.customWarning}}
+        </p>
+        <div ng-repeat="method in model.displayOrder">
+          <div ng-include="model.methods[method].template"></div>
+          <hr ng-if="!$last" />
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button ng-if="model.display.cancel"
+          type="button" class="btn btn-default stackable-cancel"
+          ng-disabled="model.loading">Cancel</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
