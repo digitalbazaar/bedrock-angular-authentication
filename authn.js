@@ -4,16 +4,19 @@
 define([
   'angular',
   './authn-service',
+  './login-directive',
   './login-modal-directive'
 ], function(
   angular,
   authnService,
+  loginDirective,
   loginModalDirective) {
 
 'use strict';
 
 var module = angular.module('bedrock.authn', []);
 
+module.directive(loginDirective);
 module.directive(loginModalDirective);
 module.service(authnService);
 

@@ -1,5 +1,5 @@
 /*!
- * Authentication Service.
+ * Authn Service.
  *
  * Copyright (c) 2016 Digital Bazaar, Inc. All rights reserved.
  *
@@ -9,13 +9,10 @@ define(['angular'], function(angular) {
 'use strict';
 
 /* @ngInject */
-function factory(config) {
+function factory() {
   var service = {};
   service.methods = {};
   service.displayOrder = [];
-  if('authentication' in config.data) {
-    service.displayOrder = config.data.authentication.displayOrder || [];
-  }
 
   service.register = function(method, options) {
     if(method in service.methods) {
