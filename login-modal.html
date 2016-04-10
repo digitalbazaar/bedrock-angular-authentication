@@ -1,8 +1,8 @@
 <br-modal>
-  <div name="br-modal-header">
+  <br-modal-header>
     <h3 class="modal-title">Sign In</h3>
-  </div>
-  <div name="br-modal-body">
+  </br-modal-header>
+  <br-modal-body>
     <br-demo-warning></br-demo-warning>
     <p ng-if="!model.newLogin" class="alert alert-warning">
       Your session has expired, please sign back in to continue.
@@ -14,10 +14,10 @@
       <div ng-include="model.methods[method].template"></div>
       <hr ng-if="!$last" />
     </div>
-  </div>
-  <div name="br-modal-footer">
+  </br-modal-body>
+  <br-modal-footer>
     <button ng-if="model.display.cancel"
       type="button" class="btn btn-default stackable-cancel"
       ng-disabled="model.loading">Cancel</button>
-  </div>
+  </br-modal-footer>
 </br-modal>
