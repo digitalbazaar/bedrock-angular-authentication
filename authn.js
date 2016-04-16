@@ -14,7 +14,7 @@ define([
 
 'use strict';
 
-var module = angular.module('bedrock.authn', []);
+var module = angular.module('bedrock.authn', ['bedrock.modal']);
 
 module.directive(loginDirective);
 module.directive(loginModalDirective);
