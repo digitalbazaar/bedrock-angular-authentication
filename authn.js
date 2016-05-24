@@ -4,22 +4,16 @@
 define([
   'angular',
   './authn-service',
-  './login-directive',
-  './login-modal-directive'
-], function(
-  angular,
-  authnService,
-  loginDirective,
-  loginModalDirective) {
+  './login-component',
+  './login-modal-component'
+], function(angular) {
 
 'use strict';
 
 var module = angular.module('bedrock.authn', ['bedrock.modal']);
 
-module.directive(loginDirective);
-module.directive(loginModalDirective);
-module.service(authnService);
-
-return module.name;
+Array.prototype.slice.call(arguments, 1).forEach(function(register) {
+  register(module);
+});
 
 });

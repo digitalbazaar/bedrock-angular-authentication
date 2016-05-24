@@ -4,20 +4,20 @@
   </br-modal-header>
   <br-modal-body>
     <br-demo-warning></br-demo-warning>
-    <p ng-if="!model.newLogin" class="alert alert-warning">
+    <p ng-if="!$ctrl.newLogin" class="alert alert-warning">
       Your session has expired, please sign back in to continue.
     </p>
-    <p ng-if="model.display.customWarning" class="alert alert-warning">
-      {{model.display.customWarning}}
+    <p ng-if="$ctrl.display.customWarning" class="alert alert-warning">
+      {{$ctrl.display.customWarning}}
     </p>
-    <div ng-repeat="method in model.displayOrder">
-      <div ng-include="model.methods[method].template"></div>
+    <div ng-repeat="method in $ctrl.displayOrder">
+      <div ng-include="$ctrl.methods[method].template"></div>
       <hr ng-if="!$last" />
     </div>
   </br-modal-body>
   <br-modal-footer>
-    <button ng-if="model.display.cancel"
+    <button ng-if="$ctrl.display.cancel"
       type="button" class="btn btn-default stackable-cancel"
-      ng-disabled="model.loading">Cancel</button>
+      ng-disabled="$ctrl.loading">Cancel</button>
   </br-modal-footer>
 </br-modal>

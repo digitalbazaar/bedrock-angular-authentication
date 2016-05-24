@@ -8,6 +8,10 @@ define(['angular'], function(angular) {
 
 'use strict';
 
+function register(module) {
+  module.service('brAuthnService', factory);
+}
+
 /* @ngInject */
 function factory() {
   var service = {};
@@ -28,6 +32,6 @@ function factory() {
   return service;
 }
 
-return {brAuthnService: factory};
+return register;
 
 });
