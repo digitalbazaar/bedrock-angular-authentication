@@ -1,10 +1,11 @@
 # bedrock-angular-authn ChangeLog
 
-## [Unreleased]
+## 2.0.0 - 2016-05-24
 
-## [1.0.0] - 2016-04-29
+### Changed
+- Use Angular 1.5 component syntax.
+- Change attribute names on components to match current conventions.
+
+## 1.0.0 - 2016-04-29
 
 - See git history for changes.
-
-[Unreleased]: https://github.com/digitalbazaar/bedrock-angular-authn/compare/0.0.0...HEAD
-[1.0.0]: https://github.com/digitalbazaar/bedrock-angular-authn/compare/0.0.0...1.0.0
