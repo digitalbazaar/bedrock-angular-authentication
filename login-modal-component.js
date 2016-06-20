@@ -4,7 +4,7 @@
  * Copyright (c) 2012-2016 Digital Bazaar, Inc. All rights reserved.
  *
  */
-define(['angular', 'lodash'], function(angular, _) {
+define(['lodash'], function(_) {
 
 'use strict';
 
