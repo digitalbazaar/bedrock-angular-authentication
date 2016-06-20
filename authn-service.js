@@ -4,7 +4,7 @@
  * Copyright (c) 2016 Digital Bazaar, Inc. All rights reserved.
  *
  */
-define(['angular'], function(angular) {
+define([], function() {
 
 'use strict';
 
