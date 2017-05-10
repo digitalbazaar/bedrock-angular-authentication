@@ -1,5 +1,7 @@
 # bedrock-angular-authn ChangeLog
 
+## 2.1.1 - 2017-05-10
+
 ### Fixed
 - Initialize component via `$onInit`.
 
