@@ -1,20 +1,14 @@
 /*!
- * Copyright (c) 2016 Digital Bazaar, Inc. All rights reserved.
+ * Copyright (c) 2016-2017 Digital Bazaar, Inc. All rights reserved.
  */
-define([], function() {
-
-'use strict';
-
 /* @ngInject */
-function register(module) {
-  module.component('brAuthnLogin', {
-    bindings: {
-      displayLogin: '=brDisplayLogin'
-    },
-    controller: Ctrl,
-    templateUrl: requirejs.toUrl('bedrock-angular-authn/login-component.html')
-  });
-}
+export default {
+  bindings: {
+    displayLogin: '=brDisplayLogin'
+  },
+  controller: Ctrl,
+  templateUrl: 'bedrock-angular-authn/login-component.html'
+};
 
 /* @ngInject */
 function Ctrl() {
@@ -24,7 +18,3 @@ function Ctrl() {
     self.displayLogin = true;
   };
 }
-
-return register;
-
-});

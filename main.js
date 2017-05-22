@@ -1,22 +1,19 @@
 /*!
- * Copyright (c) 2016 Digital Bazaar, Inc. All rights reserved.
+ * Copyright (c) 2016-2017 Digital Bazaar, Inc. All rights reserved.
  */
-define([
-  'angular',
-  './authn-service',
-  './login-component',
-  './login-modal-component'
-], function(angular) {
-
-'use strict';
+import angular from 'angular';
+import AuthnService from './authn-service';
+import LoginComponent from './login-component';
+import LoginModalComponent from './login-modal-component';
 
 var module = angular.module(
-  'bedrock.authn',
-  ['bedrock.alert', 'bedrock.modal', 'bedrock.resolver', 'bedrock.session']);
+  'bedrock.authn', ['bedrock.alert', 'bedrock.modal', 'bedrock.resolver',
+    'bedrock.session'
+  ]);
 
-Array.prototype.slice.call(arguments, 1).forEach(function(register) {
-  register(module);
-});
+module.service('brAuthnService', AuthnService);
+module.component('brLoginComponent', LoginComponent);
+module.component('brLoginModalComponent', LoginModalComponent);
 
 /* @ngInject */
 module.config(function(routeResolverProvider) {
@@ -55,5 +52,3 @@ function checkRequirements(session, options) {
     return session[x];
   });
 }
-
-});

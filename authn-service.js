@@ -1,19 +1,11 @@
 /*!
  * Authn Service.
  *
- * Copyright (c) 2016 Digital Bazaar, Inc. All rights reserved.
+ * Copyright (c) 2016-2017 Digital Bazaar, Inc. All rights reserved.
  *
  */
-define([], function() {
-
-'use strict';
-
-function register(module) {
-  module.service('brAuthnService', factory);
-}
-
 /* @ngInject */
-function factory() {
+export default function factory() {
   var service = {};
   service.methods = {};
   service.displayOrder = [];
@@ -31,7 +23,3 @@ function factory() {
 
   return service;
 }
-
-return register;
-
-});

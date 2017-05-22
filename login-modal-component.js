@@ -1,29 +1,24 @@
 /*!
  * Login Modal.
  *
- * Copyright (c) 2012-2016 Digital Bazaar, Inc. All rights reserved.
+ * Copyright (c) 2012-2017 Digital Bazaar, Inc. All rights reserved.
  *
  */
-define(['lodash'], function(_) {
+import _ from 'lodash';
 
-'use strict';
-
-function register(module) {
-  module.component('brAuthnLoginModal', {
-    bindings: {
-      onLogin: '&brOnLogin',
-      displayOrder: '=brDisplayOrder',
-      methods: '=brMethods',
-      options: '=?brOptions'
-    },
-    controller: Ctrl,
-    require: {
-      stackable: '^stackable'
-    },
-    templateUrl: requirejs.toUrl(
-      'bedrock-angular-authn/login-modal-component.html')
-  });
-}
+export default {
+  bindings: {
+    onLogin: '&brOnLogin',
+    displayOrder: '=brDisplayOrder',
+    methods: '=brMethods',
+    options: '=?brOptions'
+  },
+  controller: Ctrl,
+  require: {
+    stackable: '^stackable'
+  },
+  templateUrl: 'bedrock-angular-authn/login-modal-component.html'
+};
 
 /* @ngInject */
 function Ctrl($timeout, brAlertService) {
@@ -60,7 +55,3 @@ function Ctrl($timeout, brAlertService) {
     self.onLogin({identity: identity});
   };
 }
-
-return register;
-
-});
