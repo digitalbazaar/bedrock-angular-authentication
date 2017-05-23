@@ -2,9 +2,9 @@
  * Copyright (c) 2016-2017 Digital Bazaar, Inc. All rights reserved.
  */
 import angular from 'angular';
-import AuthnService from './authn-service';
-import LoginComponent from './login-component';
-import LoginModalComponent from './login-modal-component';
+import AuthnService from './authn-service.js';
+import LoginComponent from './login-component.js';
+import LoginModalComponent from './login-modal-component.js';
 
 var module = angular.module(
   'bedrock.authn', ['bedrock.alert', 'bedrock.modal', 'bedrock.resolver',
