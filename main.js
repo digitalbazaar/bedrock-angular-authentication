@@ -12,8 +12,8 @@ var module = angular.module(
   ]);
 
 module.service('brAuthnService', AuthnService);
-module.component('brLogin', LoginComponent);
-module.component('brLoginModal', LoginModalComponent);
+module.component('brAuthnLogin', LoginComponent);
+module.component('brAuthnLoginModal', LoginModalComponent);
 
 /* @ngInject */
 module.config(function(routeResolverProvider) {
