@@ -1,5 +1,10 @@
 # bedrock-angular-authn ChangeLog
 
+## 3.0.3 - 2017-05-26
+
+### Fixed
+- Update deps.
+
 ## 3.0.2 - 2017-05-26
 
 ### Fixed
