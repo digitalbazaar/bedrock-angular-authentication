@@ -1,5 +1,12 @@
 # bedrock-angular-authn ChangeLog
 
+## 3.0.0 - 2017-05-26
+
+### Changed
+- **BREAKING**: Switch package manager from bower to npm.
+- **BREAKING**: Replace requirejs/amd with ES6 import.
+- Angular 1.6.x is required.
+
 ## 2.1.1 - 2017-05-10
 
 ### Fixed
