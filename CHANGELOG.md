@@ -1,5 +1,10 @@
 # bedrock-angular-authn ChangeLog
 
+## 3.0.4 - 2017-05-30
+
+### Fixed
+- Add `browserDependencies` to package.json file.
+
 ## 3.0.3 - 2017-05-26
 
 ### Fixed
