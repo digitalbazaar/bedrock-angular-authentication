@@ -11,6 +11,9 @@
     "bedrock-angular-session": "^4.0.0",
     "lodash": "^4.1.0"
   },
+  "bedrock": {
+    "browserDependencies": "all"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/digitalbazaar/bedrock-angular-authn.git"
