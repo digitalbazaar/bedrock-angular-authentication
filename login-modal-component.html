@@ -7,6 +7,7 @@
     <p ng-if="!$ctrl.newLogin" class="alert alert-warning">
       Your session has expired, please sign back in to continue.
     </p>
+    <!-- FIXME: remove bootstrap alert classes -->
     <p ng-if="$ctrl.display.customWarning" class="alert alert-warning">
       {{$ctrl.display.customWarning}}
     </p>
@@ -16,8 +17,7 @@
     </div>
   </br-modal-body>
   <br-modal-footer>
-    <button ng-if="$ctrl.display.cancel"
-      type="button" class="btn btn-default stackable-cancel"
-      ng-disabled="$ctrl.loading">Cancel</button>
+    <md-button ng-if="$ctrl.display.cancel" class="stackable-cancel"
+      ng-disabled="$ctrl.loading">Cancel</md-button>
   </br-modal-footer>
 </br-modal>
