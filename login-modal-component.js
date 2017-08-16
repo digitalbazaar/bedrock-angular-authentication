@@ -1,10 +1,7 @@
 /*!
- * Login Modal.
- *
  * Copyright (c) 2012-2017 Digital Bazaar, Inc. All rights reserved.
- *
  */
-import _ from 'lodash';
+import angular from 'angular';
 
 export default {
   bindings: {
@@ -22,17 +19,17 @@ export default {
 
 /* @ngInject */
 function Ctrl($timeout, brAlertService) {
-  var self = this;
+  const self = this;
 
-  self.$onInit = function() {
+  self.$onInit = () => {
     self.loading = false;
     self.display = {
       cancel: false
     };
 
     // apply options
-    var options = self.options || {};
-    _.assign(self.display, options.display || {});
+    const options = self.options || {};
+    angular.extend(self.display, options.display || {});
 
     // FIXME: fix-up expired login
     self.newLogin = true;
@@ -45,11 +42,11 @@ function Ctrl($timeout, brAlertService) {
 
   // TODO: document why $timeout is used
   // clear existing feedback when showing this modal
-  $timeout(function() {
+  $timeout(() => {
     brAlertService.clearFeedback();
   });
 
-  self.doneCallback = function(identity) {
+  self.doneCallback = identity => {
     // success, close modal
     self.stackable.close(null);
     self.onLogin({identity: identity});

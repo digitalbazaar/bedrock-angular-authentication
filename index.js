@@ -6,10 +6,10 @@ import AuthnService from './authn-service.js';
 import LoginComponent from './login-component.js';
 import LoginModalComponent from './login-modal-component.js';
 
-var module = angular.module(
-  'bedrock.authn', ['bedrock.alert', 'bedrock.modal', 'bedrock.resolver',
-    'bedrock.session'
-  ]);
+const module = angular.module('bedrock.authn', [
+  'bedrock.alert', 'bedrock.demo-warning', 'bedrock.modal', 'bedrock.resolver',
+  'bedrock.session'
+]);
 
 module.service('brAuthnService', AuthnService);
 module.component('brAuthnLogin', LoginComponent);
@@ -22,7 +22,7 @@ module.config(function(routeResolverProvider) {
   /* @ngInject */
   function resolve($location, $route) {
     // get session options
-    var options = $route.current.session || {};
+    let options = $route.current.session || {};
 
     // backwards-compatibility
     if(options === 'required') {
@@ -32,7 +32,7 @@ module.config(function(routeResolverProvider) {
     }
 
     // ensure current session meets requirements
-    var session = $route.current.locals.session || {};
+    const session = $route.current.locals.session || {};
     if(checkRequirements(session, options)) {
       return true;
     }
@@ -44,7 +44,7 @@ module.config(function(routeResolverProvider) {
 });
 
 function checkRequirements(session, options) {
-  var required = options.require || [];
+  let required = options.require || [];
   if(!Array.isArray(required)) {
     required = [required];
   }

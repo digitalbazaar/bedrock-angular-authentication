@@ -2,14 +2,15 @@
   "name": "bedrock-angular-authn",
   "version": "3.0.5-0",
   "description": "",
-  "main": "index.js",
+  "browser": "index.js",
   "dependencies": {
     "angular": "~1.6.4",
     "bedrock-angular-alert": "^3.0.0",
+    "bedrock-angular-demo-warning": "digitalbazaar/bedrock-angular-demo-warning#material",
+    "bedrock-angular-material": "^1.0.0",
     "bedrock-angular-modal": "^5.0.0",
     "bedrock-angular-resolver": "^3.0.0",
-    "bedrock-angular-session": "^4.0.0",
-    "lodash": "^4.1.0"
+    "bedrock-angular-session": "^4.0.0"
   },
   "bedrock": {
     "browserDependencies": "all"

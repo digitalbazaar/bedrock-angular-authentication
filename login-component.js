@@ -12,9 +12,9 @@ export default {
 
 /* @ngInject */
 function Ctrl() {
-  var self = this;
+  const self = this;
 
-  self.login = function() {
+  self.login = () => {
     self.displayLogin = true;
   };
 }

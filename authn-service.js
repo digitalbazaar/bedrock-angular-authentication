@@ -1,16 +1,13 @@
 /*!
- * Authn Service.
- *
  * Copyright (c) 2016-2017 Digital Bazaar, Inc. All rights reserved.
- *
  */
 /* @ngInject */
 export default function factory() {
-  var service = {};
+  const service = {};
   service.methods = {};
   service.displayOrder = [];
 
-  service.register = function(method, options) {
+  service.register = (method, options) => {
     if(method in service.methods) {
       throw new Error('Method "' + method + '" is already registered.');
     }
