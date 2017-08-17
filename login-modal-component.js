@@ -12,7 +12,7 @@ export default {
   },
   controller: Ctrl,
   require: {
-    stackable: '^stackable'
+    stackable: '^'
   },
   templateUrl: 'bedrock-angular-authn/login-modal-component.html'
 };
