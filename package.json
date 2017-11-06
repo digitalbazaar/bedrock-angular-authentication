@@ -10,7 +10,7 @@
     "bedrock-angular-material": "^1.0.0",
     "bedrock-angular-modal": "digitalbazaar/bedrock-angular-modal#material",
     "bedrock-angular-resolver": "^3.0.0",
-    "bedrock-angular-session": "^4.0.0"
+    "bedrock-angular-session": "digitalbazaar/bedrock-angular-session#material"
   },
   "bedrock": {
     "browserDependencies": "all"
