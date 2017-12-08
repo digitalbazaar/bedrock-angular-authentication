@@ -1,20 +1,19 @@
-<br-modal>
-  <br-modal-header>
-    <h3 class="modal-title">Sign In</h3>
-  </br-modal-header>
+<br-modal br-title="Sign In">
   <br-modal-body>
-    <br-demo-warning></br-demo-warning>
-    <!-- FIXME: remove bootstrap alert classes -->
-    <p ng-if="!$ctrl.newLogin" class="alert alert-warning">
-      Your session has expired, please sign back in to continue.
-    </p>
-    <!-- FIXME: remove bootstrap alert classes -->
-    <p ng-if="$ctrl.display.customWarning" class="alert alert-warning">
-      {{$ctrl.display.customWarning}}
-    </p>
-    <div ng-repeat="method in $ctrl.displayOrder">
-      <div ng-include="$ctrl.methods[method].template"></div>
-      <hr ng-if="!$last" />
+    <div layout-padding>
+      <br-demo-warning></br-demo-warning>
+      <!-- FIXME: remove bootstrap alert classes -->
+      <p ng-if="!$ctrl.newLogin" class="alert alert-warning">
+        Your session has expired, please sign back in to continue.
+      </p>
+      <!-- FIXME: remove bootstrap alert classes -->
+      <p ng-if="$ctrl.display.customWarning" class="alert alert-warning">
+        {{$ctrl.display.customWarning}}
+      </p>
+      <div ng-repeat="method in $ctrl.displayOrder">
+        <div ng-include="$ctrl.methods[method].template"></div>
+        <hr ng-if="!$last" />
+      </div>
     </div>
   </br-modal-body>
   <br-modal-footer>
