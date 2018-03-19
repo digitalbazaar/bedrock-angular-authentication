@@ -1,5 +1,8 @@
 # bedrock-angular-authn ChangeLog
 
+### Changed
+- **BREAKING**: Switch to material design.
+
 ## 3.0.4 - 2017-05-30
 
 ### Fixed
